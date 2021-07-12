@@ -1,0 +1,43 @@
+<br>
+<templateDrivenForm></templateDrivenForm>
+<br>
+
+<simpleForm></simpleForm>
+<br>
+
+<productForm (product)="setProductList($event)"></productForm>
+
+<div class="row">
+  <div class="col-md-12">&nbsp;</div>
+</div>
+
+<h5>Product List- A Feature Component (Parent)</h5>
+
+<div class="row">
+  <div class="col-md-12">&nbsp;</div>
+</div>
+
+<table class="table col-lg-8" id="callingHours-id" style="background-color: white;">
+
+  <thead>
+    <tr>
+      <th class="bordered-cell" style="width: 30%;">Product Name</th>
+      <th class="bordered-cell" style="width: 30%;">Product Code</th>
+      <th class="bordered-cell" style="width: 30%;">Product Description</th>
+      <th class="bordered-cell" style="width: 30%;">Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let prod of productList" let i="index">
+      <td> {{ prod.productName}}</td>
+      <td>{{prod.productCode}}</td>
+      <td>{{prod.productDescription}}</td>
+      <td><button type="button" value="Edit" class="btn btn-secondary" (click)="editRecord(prod)">Edit</button></td>
+    </tr>
+  </tbody>
+</table>
+<div *ngFor="let itm of itemArray">
+  <h5>{{itm}}</h5>
+
+</div>

@@ -1,0 +1,72 @@
+<employeesComponent></employeesComponent>
+<br>
+<br>
+
+
+<h1> This is parent Compnent</h1>
+<h1 class="text-center">{{title |titlecase}}</h1>
+<br />
+<input type="button" class="btn btn-secondary" routerLink="/addUser" value="Add User">
+<br />
+<div *ngIf="users.length>0; else noUsers">
+  <table class="table table-bordered">
+    <tr class="thead-dark">
+      <th>Index</th>
+      <th> Id </th>
+      <th>Name</th>
+      <th>Email</th>
+
+    </tr>
+    <tr *ngFor="let user of users;let i=index">
+      <td>{{i+1}}</td>
+      <td> <a href="#" [routerLink]="['/user',user.id,user.name]"> {{user.id}} </a> </td>
+      <td>{{user.name | uppercase}}</td>
+      <td>{{user.email}}</td>
+    </tr>
+  </table>
+</div>
+<ng-template #noUsers>
+  <p>Hello {{ errorMessage }}</p>
+</ng-template>
+
+
+<div *ngIf="isUserLoggedIn; else logOut">
+  <h3>Welcome user</h3>
+</div>
+
+
+
+<ng-template #logOut>
+  <p>This is not logged .</p>
+  <h3>This ng-tempalte doesn't contain dirty marking so we have to pass template refrence name using # symbol. i.e :
+    #logout.</h3>
+  <h4> we can use this ng-template anywhere in the [page</h4>
+</ng-template>
+
+<br />
+Select Country : <select (change)="choice($event)" class="dropdown">
+  <option value="0">-Select-</option>
+  <option *ngFor="let c of countries; let i=index;" [value]="c.cId">{{c.cName}}</option>
+</select>
+<br />
+<h3> Selected country is : {{selectedCountryValue}} - {{selectedCountryText}}</h3>
+
+<div [ngSwitch]="selectedCountryValue">
+  <div *ngSwitchCase="101" class="jumbotron">
+    <h3> India calling code is +91</h3>
+  </div>
+  <div *ngSwitchCase="102" class="jumbotron">
+    <h3> China calling code is +93</h3>
+  </div>
+  <div *ngSwitchCase="103" class="jumbotron">
+    <h3> Japan calling code is +94</h3>
+  </div>
+  <div *ngSwitchDefault class="jumbotron">
+    <h3> Select calling code is</h3>
+  </div>
+</div>
+
+
+<child-component [userName]="userNameValue" (childUserName)="getValFromChild($event)"></child-component>
+
+<p>{{childUName}}</p>

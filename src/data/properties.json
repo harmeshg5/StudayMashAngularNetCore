@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "name": "House",
+    "price": 12000,
+    "propertyType": "Rent",
+    "bhk": 1,
+    "sellRent": 1,
+    "image": "House_1",
+    "city": "Delhi"
+  },
+  {
+    "id": 2,
+    "name": "Villa",
+    "price": 22000,
+    "propertyType": "Rent 2",
+    "bhk": 1,
+    "sellRent": 2,
+    "image": "House_2",
+    "city": "Mumbai"
+  },
+  {
+    "id": 3,
+    "name": "Shop",
+    "price": 12000,
+    "propertyType": "Rent",
+    "bhk": 1,
+    "sellRent": 1,
+    "image": "House_3",
+    "city": "Jaipur"
+  },
+  {
+    "id": 4,
+    "name": "Haweli",
+    "price": 34000,
+    "propertyType": "Rent",
+    "bhk": 1,
+    "sellRent": 1,
+    "city": "Rohtak"
+  },
+  {
+    "id": 5,
+    "name": "Garder",
+    "price": 12000,
+    "propertyType": "Rent",
+    "bhk": 1,
+    "sellRent": 2,
+    "image": "House_4",
+    "city": "Lucknow"
+  },
+  {
+    "id": 6,
+    "name": "Rooms",
+    "price": 12000,
+    "propertyType": "Rent",
+    "bhk": 1,
+    "sellRent": 1,
+    "city": "Alwar"
+  }
+]

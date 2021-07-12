@@ -1,0 +1,55 @@
+<form name="form" #productForm="ngForm" (ngSubmit)="$event.preventDefault()" novalidate>
+
+  <a href="https://medium.com/coding-in-depth/angular-why-and-when-to-create-a-feature-component-and-feature-module-622351b5d136" ><h3> Tutorial reference</h3></a>
+  <h5>Prodcut Component - A Feature Component (Child)</h5>
+
+  <div class="row">
+    <div class="col-md-12"> &nbsp; </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12"> &nbsp; </div>
+  </div>
+
+  <div class="row required-field">
+    <div class="col-md-4">
+      <label for="" class="cus-form-label">Product Name</label>
+      <input class="form-control minimal" id="productName" name="productName" [(ngModel)]="productField.productName" />
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">&nbsp;</div>
+  </div>
+
+  <div class="row required-field">
+    <div class="col-md-4">
+      <label for="" class="cus-form-label"> Product Code</label>
+      <input type="text" class="form-control minimal" id="productCode" name="productCode"
+        [(ngModel)]="productField.productCode">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">&nbsp;</div>
+  </div>
+
+  <div class="row required-field">
+    <div class="col-md-4">
+      <label for="" class="cus-form-label"> Product Description</label>
+      <input type="text" class="form-control minimal" id="productDescription" name="productDescription"
+        [(ngModel)]="productField.productDescription">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">&nbsp;</div>
+  </div>
+
+  <button type="button" (click)="SubmitForm()" class="btn btn-primary">Submit Form</button>
+
+  <div class="row">
+    <div class="col-md-12">&nbsp;</div>
+  </div>
+</form>

@@ -1,0 +1,20 @@
+<h2>This is user details page</h2>
+{{user |json}}
+
+<div *ngIf="user != null">
+  {{user.name}}
+</div>
+
+<div>
+  <ul class="nav nav-tabs">
+
+    <li class="nav-item">
+      <a class="nav-link" routerLink="address">Address</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" routerLink="company">Company</a>
+    </li>
+  </ul>
+
+  <router-outlet></router-outlet>
+</div>
